@@ -1,0 +1,2142 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1110.1623                               -->
+<workbook original-version='18.1' source-build='2020.3.3 (20203.20.1110.1623)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (exec_revenue)' inline='true' name='federated.0mnopfm1u38kc41amqk9a1cayj83' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='exec_revenue' name='excel-direct.0934rua0482dru0zqlpbj1xyrm5r'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/adamp/OneDrive/Desktop/a_vizes/Project/exec_revenue.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0934rua0482dru0zqlpbj1xyrm5r' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='0' />
+            <column datatype='real' name='Profit' ordinal='1' />
+            <column datatype='real' name='Expense' ordinal='2' />
+            <column datatype='real' name='mov2YrProfit' ordinal='3' />
+            <column datatype='real' name='mov2YrExpAvg' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0934rua0482dru0zqlpbj1xyrm5r' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='6'>
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='0' />
+            <column datatype='real' name='Profit' ordinal='1' />
+            <column datatype='real' name='Expense' ordinal='2' />
+            <column datatype='real' name='mov2YrProfit' ordinal='3' />
+            <column datatype='real' name='mov2YrExpAvg' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E13:no:A1:E13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expense</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Expense]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Expense</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mov2YrProfit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mov2YrProfit]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>mov2YrProfit</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mov2YrExpAvg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mov2YrExpAvg]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>mov2YrExpAvg</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='% Expense YOY' datatype='real' name='[% Expense (copy)_1494069179789676552]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='((AVG([Expense]) - [Profit Prev (copy)_1494069179785297924])/[Profit Prev (copy)_1494069179785297924])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='% Expense Over 4' datatype='real' name='[% Expense YOY (copy)_1494069179806146570]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='((AVG([Expense]) - [Expense Prev (copy)_1494069179806089225])/[Expense Prev (copy)_1494069179806089225])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='% Expense' datatype='real' name='[% Profit (copy)_1494069179785392133]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='((AVG([Expense]) - [Profit Prev (copy)_1494069179785297924])/[Profit Prev (copy)_1494069179785297924])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Profit Prev' datatype='real' name='[Calculation_1494069179772383232]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='LOOKUP(AVG([Profit]), 1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='% Profit' datatype='real' name='[Calculation_1494069179773874177]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='((AVG([Profit]) - [Calculation_1494069179772383232])/[Calculation_1494069179772383232])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Expense Prev 4' datatype='real' name='[Expense Prev (copy)_1494069179806089225]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='LOOKUP(AVG(Expense), -4)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='real' name='[Expense]' role='measure' type='quantitative' />
+      <column caption='Expense Prev' datatype='real' name='[Profit Prev (copy)_1494069179785297924]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='LOOKUP(AVG(Expense), -1)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_B91051B6BCC54DDC8C799885F55B024C]' role='measure' type='quantitative' />
+      <column datatype='real' name='[mov2YrExpAvg]' role='measure' type='quantitative' />
+      <column datatype='real' name='[mov2YrProfit]' role='measure' type='quantitative' />
+      <column-instance column='[Expense]' derivation='Sum' name='[sum:Expense:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mov2YrExpAvg]' derivation='Sum' name='[sum:mov2YrExpAvg:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mov2YrProfit]' derivation='Sum' name='[sum:mov2YrProfit:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[% Expense (copy)_1494069179789676552]' derivation='User' name='[usr:% Expense (copy)_1494069179789676552:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+        <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Profit Prev (copy)_1494069179785297924]' ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[% Profit (copy)_1494069179785392133]' derivation='User' name='[usr:% Profit (copy)_1494069179785392133:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+        <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Profit Prev (copy)_1494069179785297924]' ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[Calculation_1494069179772383232]' derivation='User' name='[usr:Calculation_1494069179772383232:qk:2]' pivot='key' type='quantitative'>
+        <table-calc ordering-field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Year]' ordering-type='Field' />
+      </column-instance>
+      <column-instance column='[Calculation_1494069179772383232]' derivation='User' name='[usr:Calculation_1494069179772383232:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[Calculation_1494069179773874177]' derivation='User' name='[usr:Calculation_1494069179773874177:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+        <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Calculation_1494069179772383232]' ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[yr:Year:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2011</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>2010</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>2008</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>2017</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>2019</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2012</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>2009</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Expense (copy)_1494069179789676552:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:mov2YrProfit:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Profit (copy)_1494069179785392133:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179772383232:qk:2]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179772383232:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:mov2YrExpAvg:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_B91051B6BCC54DDC8C799885F55B024C'>
+            <properties context=''>
+              <relation connection='excel-direct.0934rua0482dru0zqlpbj1xyrm5r' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='6'>
+                  <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='0' />
+                  <column datatype='real' name='Profit' ordinal='1' />
+                  <column datatype='real' name='Expense' ordinal='2' />
+                  <column datatype='real' name='mov2YrProfit' ordinal='3' />
+                  <column datatype='real' name='mov2YrExpAvg' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Sheet1 (concat)' inline='true' name='federated.038y46y1sztubb18jbpjk03waa1b' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='concat' name='excel-direct.0r8xbux1ikl9e51ekfz2x0qnkehs'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/adamp/OneDrive/Desktop/a_vizes/Project/concat.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0r8xbux1ikl9e51ekfz2x0qnkehs' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:E1675:no:A1:E1675:0' header='yes' outcome='2'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='integer' name='Aboard' ordinal='1' />
+            <column datatype='integer' name='Fatalities' ordinal='2' />
+            <column datatype='string' name='Operator' ordinal='3' />
+            <column datatype='string' name='period' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0r8xbux1ikl9e51ekfz2x0qnkehs' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:E1675:no:A1:E1675:0' header='yes' outcome='2'>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='integer' name='Aboard' ordinal='1' />
+            <column datatype='integer' name='Fatalities' ordinal='2' />
+            <column datatype='string' name='Operator' ordinal='3' />
+            <column datatype='string' name='period' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E1675:no:A1:E1675:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aboard</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Aboard]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Aboard</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fatalities</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fatalities]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Fatalities</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Operator</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Operator]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Operator</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='AvgAboarcCalcString' datatype='string' name='[AvgAboarcCalc (copy)_1494069179818844173]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='str(ROUND([Calculation_1494069179818151948],2))+&quot; passengers&quot;' />
+      </column>
+      <column caption='AvgAboarcCalc' datatype='real' name='[Calculation_1494069179818151948]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF AVG([Aboard]) &gt; 45 THEN AVG([Aboard]) ELSE NULL END' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_0DC026C2D71D4A0DA1F303AE852D4670]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='string' name='[period]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_0DC026C2D71D4A0DA1F303AE852D4670'>
+            <properties context=''>
+              <relation connection='excel-direct.0r8xbux1ikl9e51ekfz2x0qnkehs' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:E1675:no:A1:E1675:0' header='yes' outcome='2'>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='Aboard' ordinal='1' />
+                  <column datatype='integer' name='Fatalities' ordinal='2' />
+                  <column datatype='string' name='Operator' ordinal='3' />
+                  <column datatype='string' name='period' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Expenses Recent'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='12'>Airline Expenses Per Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (exec_revenue)' name='federated.0mnopfm1u38kc41amqk9a1cayj83' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mnopfm1u38kc41amqk9a1cayj83'>
+            <column caption='% Expense' datatype='real' name='[% Profit (copy)_1494069179785392133]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Expense]) - [Profit Prev (copy)_1494069179785297924])/[Profit Prev (copy)_1494069179785297924])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Profit Prev' datatype='real' name='[Calculation_1494069179772383232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG([Profit]), 1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='% Profit' datatype='real' name='[Calculation_1494069179773874177]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Profit]) - [Calculation_1494069179772383232])/[Calculation_1494069179772383232])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Expense]' role='measure' type='quantitative' />
+            <column caption='Expense Prev' datatype='real' name='[Profit Prev (copy)_1494069179785297924]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG(Expense), -1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Year]' derivation='Month' name='[mn:Year:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[mov2YrProfit]' role='measure' type='quantitative' />
+            <column-instance column='[Year]' derivation='Quarter' name='[qr:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Expense]' derivation='Sum' name='[sum:Expense:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mov2YrProfit]' derivation='Sum' name='[sum:mov2YrProfit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% Profit (copy)_1494069179785392133]' derivation='User' name='[usr:% Profit (copy)_1494069179785392133:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Profit Prev (copy)_1494069179785297924]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_1494069179773874177]' derivation='User' name='[usr:Calculation_1494069179773874177:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Calculation_1494069179772383232]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Year:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2018' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2019' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]' value='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' />
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]' value='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='stroke-size' id='annotation_4' value='3' />
+            <format attr='line-end' id='annotation_4' value='arrow' />
+            <format attr='stroke-size' id='annotation_5' value='3' />
+            <format attr='line-end' id='annotation_5' value='arrow' />
+            <format attr='rounding' id='annotation_5' value='small' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa9b' />
+            <format attr='stroke-color' id='annotation_5' value='#555555' />
+            <format attr='stroke-color' id='annotation_4' value='#555555' />
+            <format attr='rounding' id='annotation_4' value='small' />
+            <format attr='fill-color' id='annotation_4' value='#aa000020' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[qr:Year:ok]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[mn:Year:ok]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' />
+              <text column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]' />
+              <text column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]</run>
+                <run>&gt; per mil&#10;&lt;</run>
+                <run>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</run>
+                <run>&gt; profit change YOY</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Expense:qk]</rows>
+        <cols>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</cols>
+        <annotations>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='325'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#787878' fontsize='9'>4 Year % Spike in Profit:</run>
+              <run bold='true' fontalignment='1' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:mov2YrProfit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>16088.583576999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='304' y='76' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='280'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontcolor='#787878' fontsize='9'>4 Year % Dip in Profit:</run>
+              <run bold='true' fontalignment='0' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>11774.601189999999</value>
+                    <value>2018</value>
+                    <value>-0.20816340062044622</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-1' y='-285' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='279'>
+            <formatted-text>
+              <run bold='true' fontcolor='#787878' fontsize='9'>4 Year % Increase in Profit:</run>
+              <run bold='true' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='731' y='2' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{B2D04874-C5E8-4704-9F19-1D668FB6313A}' />
+    </worksheet>
+    <worksheet name='Expenses over time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='12'>Airline Expenses % change year over year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (exec_revenue)' name='federated.0mnopfm1u38kc41amqk9a1cayj83' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mnopfm1u38kc41amqk9a1cayj83'>
+            <column caption='% Expense YOY' datatype='real' name='[% Expense (copy)_1494069179789676552]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Expense]) - [Profit Prev (copy)_1494069179785297924])/[Profit Prev (copy)_1494069179785297924])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='% Expense Over 4' datatype='real' name='[% Expense YOY (copy)_1494069179806146570]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Expense]) - [Expense Prev (copy)_1494069179806089225])/[Expense Prev (copy)_1494069179806089225])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='% Expense' datatype='real' name='[% Profit (copy)_1494069179785392133]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Expense]) - [Profit Prev (copy)_1494069179785297924])/[Profit Prev (copy)_1494069179785297924])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Profit Prev' datatype='real' name='[Calculation_1494069179772383232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG([Profit]), 1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='% Profit' datatype='real' name='[Calculation_1494069179773874177]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Profit]) - [Calculation_1494069179772383232])/[Calculation_1494069179772383232])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Expense Prev 4' datatype='real' name='[Expense Prev (copy)_1494069179806089225]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG(Expense), -4)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Expense]' role='measure' type='quantitative' />
+            <column caption='Expense Prev' datatype='real' name='[Profit Prev (copy)_1494069179785297924]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG(Expense), -1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[mov2YrProfit]' role='measure' type='quantitative' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mov2YrProfit]' derivation='Sum' name='[sum:mov2YrProfit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[% Expense (copy)_1494069179789676552]' derivation='User' name='[usr:% Expense (copy)_1494069179789676552:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Profit Prev (copy)_1494069179785297924]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[% Expense YOY (copy)_1494069179806146570]' derivation='User' name='[usr:% Expense YOY (copy)_1494069179806146570:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Expense Prev (copy)_1494069179806089225]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[% Profit (copy)_1494069179785392133]' derivation='User' name='[usr:% Profit (copy)_1494069179785392133:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Profit Prev (copy)_1494069179785297924]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_1494069179773874177]' derivation='User' name='[usr:Calculation_1494069179773874177:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Calculation_1494069179772383232]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]'>
+            <groupfilter from='2010' function='range' level='[yr:Year:ok]' to='2019' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' field-type='quantitative' major-origin='0.0' major-spacing='0.10000000000000001' scope='rows' type='space' />
+            <format attr='tick-color' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='#00000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='stroke-size' id='annotation_4' value='3' />
+            <format attr='line-end' id='annotation_4' value='arrow' />
+            <format attr='stroke-size' id='annotation_5' value='3' />
+            <format attr='line-end' id='annotation_5' value='arrow' />
+            <format attr='rounding' id='annotation_5' value='small' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa9b' />
+            <format attr='stroke-color' id='annotation_5' value='#555555' />
+            <format attr='stroke-color' id='annotation_4' value='#555555' />
+            <format attr='rounding' id='annotation_4' value='small' />
+            <format attr='fill-color' id='annotation_4' value='#aa000020' />
+            <format attr='stroke-size' id='annotation_8' value='2' />
+            <format attr='rounding' id='annotation_8' value='small' />
+            <format attr='line-end' id='annotation_8' value='arrow' />
+            <format attr='stroke-size' id='annotation_10' value='2' />
+            <format attr='rounding' id='annotation_10' value='small' />
+            <format attr='line-end' id='annotation_10' value='arrow' />
+            <format attr='fill-color' id='annotation_10' value='#aa00002f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</rows>
+        <cols>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</cols>
+        <annotations>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='325'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#787878' fontsize='9'>4 Year % Spike in Profit:</run>
+              <run bold='true' fontalignment='1' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:mov2YrProfit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>16088.583576999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='304' y='76' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='280'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontcolor='#787878' fontsize='9'>4 Year % Dip in Profit:</run>
+              <run bold='true' fontalignment='0' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>11774.601189999999</value>
+                    <value>2018</value>
+                    <value>-0.20816340062044622</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-1' y='-285' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='279'>
+            <formatted-text>
+              <run bold='true' fontcolor='#787878' fontsize='9'>4 Year % Increase in Profit:</run>
+              <run bold='true' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='731' y='2' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>% Expense: </run>
+              <run bold='true'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2015</value>
+                    <value>-0.089185879080189434</value>
+                    <value>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Profit (copy)_1494069179785392133:qk]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>% Expense: </run>
+              <run bold='true'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2018</value>
+                    <value>0.10329013202025525</value>
+                    <value>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Profit (copy)_1494069179785392133:qk]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-236' y='-3' />
+          </annotation>
+          <annotation class='point' id='8' mark-position='1' pullback='12' text-width='449'>
+            <formatted-text>
+              <run fontcolor='#666666' fontsize='9'>2015 saw a decrease of  </run>
+              <run bold='true' fontcolor='#666666' fontsize='9'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]> in expenseswhich was a ]]></run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#666666' fontsize='9'>Æ </run>
+              <run bold='true' fontcolor='#666666' fontsize='9'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]> decrease over four years]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2015</value>
+                    <value>-0.089185879080189434</value>
+                    <value>-0.046680804666226879</value>
+                    <value>-0.089185879080189434</value>
+                    <value>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Profit (copy)_1494069179785392133:qk]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='7' y='-457' />
+          </annotation>
+          <annotation class='point' id='10' mark-position='1' pullback='12' text-width='435'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#666666' fontsize='9'>2018 saw an increase of  </run>
+              <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='9'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]> in expenseswhich was a ]]></run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#666666' fontsize='9'>Æ </run>
+              <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='9'><![CDATA[<[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]> increase over four years]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense (copy)_1494069179789676552:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Expense YOY (copy)_1494069179806146570:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:% Profit (copy)_1494069179785392133:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2018</value>
+                    <value>0.10329013202025525</value>
+                    <value>0.097959977101241297</value>
+                    <value>0.10329013202025525</value>
+                    <value>&quot;[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:\% Profit (copy)_1494069179785392133:qk]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-313' y='-1' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{670B9B98-1F0B-486A-9743-32E604DC5FB5}' />
+    </worksheet>
+    <worksheet name='Profits'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666' fontsize='12'>Airline Profits Per Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (exec_revenue)' name='federated.0mnopfm1u38kc41amqk9a1cayj83' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mnopfm1u38kc41amqk9a1cayj83'>
+            <column caption='Profit Prev' datatype='real' name='[Calculation_1494069179772383232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOOKUP(AVG([Profit]), 1)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='% Profit' datatype='real' name='[Calculation_1494069179773874177]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((AVG([Profit]) - [Calculation_1494069179772383232])/[Calculation_1494069179772383232])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[mov2YrProfit]' role='measure' type='quantitative' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mov2YrProfit]' derivation='Sum' name='[sum:mov2YrProfit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1494069179773874177]' derivation='User' name='[usr:Calculation_1494069179773874177:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[Calculation_1494069179772383232]' ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Year:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2018' />
+              <groupfilter function='member' level='[yr:Year:ok]' member='2019' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]' field-type='quantitative' major-origin='0.0' major-spacing='5000.0' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]' value='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]' value='c&quot;$&quot;0,K;(&quot;$&quot;0,K)' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='stroke-size' id='annotation_4' value='3' />
+            <format attr='line-end' id='annotation_4' value='arrow' />
+            <format attr='stroke-size' id='annotation_5' value='3' />
+            <format attr='line-end' id='annotation_5' value='arrow' />
+            <format attr='rounding' id='annotation_5' value='small' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa9b' />
+            <format attr='stroke-color' id='annotation_5' value='#555555' />
+            <format attr='stroke-color' id='annotation_4' value='#555555' />
+            <format attr='rounding' id='annotation_4' value='small' />
+            <format attr='fill-color' id='annotation_4' value='#aa000020' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]' />
+              <lod column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]' />
+              <text column='[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</run>
+                <run>&gt; per mil</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='line-interpolation' value='linear' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</rows>
+        <cols>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</cols>
+        <annotations>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='325'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#787878' fontsize='9'>4 Year % Spike in Profit:</run>
+              <run bold='true' fontalignment='1' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:mov2YrProfit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>16088.583576999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='304' y='76' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='280'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontcolor='#787878' fontsize='9'>4 Year % Dip in Profit:</run>
+              <run bold='true' fontalignment='0' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>11774.601189999999</value>
+                    <value>2018</value>
+                    <value>-0.20816340062044622</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-1' y='-285' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='279'>
+            <formatted-text>
+              <run bold='true' fontcolor='#787878' fontsize='9'>4 Year % Increase in Profit:</run>
+              <run bold='true' fontcolor='#e15759' fontsize='9'><![CDATA[ <[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]>]]></run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[sum:Profit:qk]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+                      <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[usr:Calculation_1494069179773874177:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>24793.822909999999</value>
+                    <value>2015</value>
+                    <value>0.74304190806526571</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='731' y='2' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{9E391DC7-27A5-4B07-8DA6-55C9A3A6AE7A}' />
+    </worksheet>
+    <worksheet name='Treemap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>Average Number of passengers per flight by year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (concat)' name='federated.038y46y1sztubb18jbpjk03waa1b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.038y46y1sztubb18jbpjk03waa1b'>
+            <column datatype='integer' name='[Aboard]' role='measure' type='quantitative' />
+            <column caption='AvgAboarcCalcString' datatype='string' name='[AvgAboarcCalc (copy)_1494069179818844173]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='str(ROUND([Calculation_1494069179818151948],2))+&quot; passengers&quot;' />
+            </column>
+            <column caption='AvgAboarcCalc' datatype='real' name='[Calculation_1494069179818151948]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF AVG([Aboard]) &gt; 45 THEN AVG([Aboard]) ELSE NULL END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Aboard]' derivation='Avg' name='[avg:Aboard:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AvgAboarcCalc (copy)_1494069179818844173]' derivation='User' name='[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]'>
+            <groupfilter from='1985' function='range' level='[yr:Date:ok]' to='2019' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <alphabetic-sort column='[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]' direction='ASC' />
+          <slices>
+            <column>[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]' num-steps='2' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ae123a</color>
+                <color>#c51d3c</color>
+                <color>#d9303f</color>
+                <color>#e84646</color>
+                <color>#f16051</color>
+                <color>#f77964</color>
+                <color>#fb8f78</color>
+                <color>#fda694</color>
+                <color>#ffbab0</color>
+                <color>#fed1cc</color>
+                <color>#fbe6e5</color>
+                <color>#ffffff</color>
+                <color>#d0d2d4</color>
+                <color>#c7cbd0</color>
+                <color>#bfc4cb</color>
+                <color>#b6bec7</color>
+                <color>#aeb7c2</color>
+                <color>#a6b1be</color>
+                <color>#9fabb9</color>
+                <color>#97a4b5</color>
+                <color>#909eb0</color>
+                <color>#8898ac</color>
+                <color>#8293a8</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_3' value='#c0c0c0' />
+            <format attr='stroke-size' id='annotation_3' value='0' />
+            <format attr='line-visibility' id='annotation_3' value='off' />
+            <format attr='body-type' id='annotation_3' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]' />
+              <color column='[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]' />
+              <lod column='[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]' />
+              <text column='[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]' />
+              <text column='[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]' />
+            </encodings>
+            <customized-tooltip show-buttons='false'>
+              <formatted-text>
+                <run fontcolor='#787878'>Year of Date:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Aboard:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='11'><![CDATA[<[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]>]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+                <run bold='true' fontalignment='0' fontsize='12'><![CDATA[<[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]> ]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='normal' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-transparency' value='150' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <annotations>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='124'>
+            <formatted-text>
+              <run bold='true' fontcolor='#ffffff' fontsize='11'>&lt;</run>
+              <run bold='true' fontcolor='#ffffff' fontsize='11'>[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]</run>
+              <run bold='true' fontcolor='#ffffff' fontsize='11'>&gt; passengers</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields />
+                      <y-fields />
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]</field>
+                      <field>[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]</field>
+                      <field>[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>33.888888888888886</value>
+                    <value>2019</value>
+                    <value>%null%</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='3' y='21' />
+          </annotation>
+        </annotations>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{211A7856-1925-43E2-80D8-95D1C94E1D30}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' name='Profits'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]</field>
+            <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{026040DF-824C-4C6B-8306-EDB3F717EE5A}' />
+    </window>
+    <window class='worksheet' name='Expenses Recent'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{547D33B2-76CF-498F-943D-95146AA5D339}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Expenses over time'>
+      <cards>
+        <edge name='left'>
+          <strip size='211'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.0mnopfm1u38kc41amqk9a1cayj83].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mnopfm1u38kc41amqk9a1cayj83].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{17AB34A1-2AFF-43E5-A4F2-66F2E9F0BF46}' />
+    </window>
+    <window class='worksheet' name='Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.038y46y1sztubb18jbpjk03waa1b].[avg:Aboard:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.038y46y1sztubb18jbpjk03waa1b].[usr:AvgAboarcCalc (copy)_1494069179818844173:nk]</field>
+            <field>[federated.038y46y1sztubb18jbpjk03waa1b].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{32A1B295-B34A-444A-99BF-FAD7CE40A675}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Expenses Recent' width='192'>
+      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
+      NI3u7m6uX7+OxWKhWCwyNDREKBQiEolw6tSpympQOp2mpqaGbDbL8vIy+Xwer9eL0+nE4/FQ
+      W1tLOBxmenqaPXv28O677/L999/T0NBAJBLhxRdfZHh4mKGhIYaHh3nnnXceuzc6n8+ztra2
+      o2GGw2GmpqY4evTojl1dvR9/x0OgHTsJjsfjNDQ00NzcTG9vL1evXsVisdDU1ERjYyPhcLhy
+      DOxyuQiFQtTX19PX18fFixcplUrY7XZaWlpwu92VC0cAe/bs4dChQ8DtVZSWlhZyuRxff/01
+      uq7T1NREc3NzVT/8hmEQj0X/1GM9Tp1YZG3HxuJx6jzz1D8o5XMPtF2ny/Ufb77YwRlgamqK
+      gYGBHRvYnYtowWCQrq6uHdvun5XLZvnX/3y928N4KO2dXRwY+seffrzSM0A6lbrnhZe9HR1s
+      J5MPN7rf8LhcnDh2DGBHtmu1WXG5PQ+9HfH3ct8BXBz5X4xSqZpjqSqvv5Gnjz+/28MQj5nH
+      ZhlUiN0gAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQil
+      SQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoE
+      IJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBC
+      aRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQm
+      AQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKA
+      UJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQil
+      SQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoE
+      IJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBC
+      aRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQm
+      AQilSQBCaZppmiZAsVjEYrl7D+lUChOzeiMxTdC0qm3earXicnvu+v1yuXzP12+aZdLb29UY
+      2m+fpKr7wG53oDudd/3+/7cPjFKJbDZTjaH9qsr7wO3xYLFYK19XAjAMA6vVetcH/t2p/vpB
+      zX1Qyf1Rv/DtZJzNrRTlUoH16AamCdl0GgNIbW2yenMNo4oTzn979G+8SWx9jUyuQC6dYiuZ
+      BiCd/r/fk1vEk1Wecf7Lo94HZtkgsnaLQskgldhkO5u/PdOmMyS3NlhZWWE7m6/qGHbnHMA0
+      SGcLLC/d4HooRCGzxcp6lCs/j5EBFhZCWKxWqjcR7r5iLo2h2Qhdnye0sMTq4g0SyU0uX52m
+      lN9m5voNCoXibg+zqrLpFBarxvz8dcLLERZDITY31rk2dx3d6UYrbJPIVHcf7NJJsAUjn8bX
+      GECz2mhtbqRYMtnTHgBgb9c+4pFlUnljd4b3CNh0F1vRNfZ0tqM7a/C5nNjqGvB7ayjk0mhW
+      J2s3VzEf4Sz4qDl0nej6Jh0djbg9DXh0B/WNAWrdDhy6k3RRo7Xh7udtO2FXAjDLRVZuRclm
+      0ng9Tq7OhWmo0VndiLEaXiW+GaWIHaf977tIlY7dJJGH9HYRi5khVjQoba4Ti8VIFazoliK6
+      q7pv/m6L3lymaEI2Z6WQWaOg2YjfWmFjI04+l8LjbcFSxRNigH8DCgH+vMQNtWcAAAAASUVO
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Expenses over time' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Profits' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Treemap' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
