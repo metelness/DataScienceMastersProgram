@@ -1,0 +1,261 @@
+---
+title: "assignment_9_CurryAdam"
+author: "Adam Curry"
+date: "8/2/2019"
+output: word_document
+---
+
+
+### How to import and clean my data
+There are three combine datasets with several columns. Several of the columns within the three datasets are unnecessary. Some don’t apply to the analysis I will conduct, and some contain incomplete information. The variables I chose to include combine the three datasets (nfl_stadiums.csv,spreadspoke_scores.csv, nfl_teams.csv'), perform some minor aggregation methods, and are specific to the winter months of the football season. I utilized sqldf library to manipulate the data in SQL syntax, as there were several joins, alterations, and aggregation methods that needed to be applied to the data. 
+
+
+
+```{r  message = FALSE , warning = FALSE}
+# import the libraries used to clean the data
+library(sqldf)
+library(tidyverse)
+
+# set the working directory and import all three files
+setwd("C:\\Users\\adamp\\OneDrive\\Desktop\\a_StatsR\\Final")
+df_stadiums <- read.csv('nfl_stadiums.csv')
+spreadspoke_scores <- read.csv('spreadspoke_scores.csv')
+df_teams <- read.csv('nfl_teams.csv')
+
+df_stadiums <- sqldf("SELECT DISTINCT
+                        stadium_name
+                        ,stadium_weather_type
+                        ,ELEVATION
+                        ,LATITUDE	
+                        ,LONGITUDE
+                        ,stadium_open
+                      FROM
+                        df_stadiums
+                      ")
+# remove white space and special characters from stadium names to join further downstream 
+df_stadiums$stad_pkey <- str_replace_all(df_stadiums$stadium_name, "[^[:alnum:]]", " ")
+df_stadiums$stad_pkey <- gsub("[[:space:]]", "", df_stadiums$stad_pkey)
+
+# designate an SKEY for a unique identifier further downstream
+df_main <- sqldf("SELECT 
+                    schedule_date||team_home AS SKEY
+                    ,schedule_week
+                    ,schedule_date
+                    ,team_home
+                    ,team_away
+                    ,spread_favorite
+                    ,over_under_line
+                    ,team_favorite_id
+                    ,score_home
+                    ,score_away
+                    ,over_under_line
+                    ,weather_temperature
+                    ,weather_wind_mph
+                    ,weather_humidity
+                    ,stadium
+                  FROM
+                    spreadspoke_scores
+                  WHERE
+                    schedule_playoff <> 'TRUE'
+                    AND schedule_season > 1980
+                    AND lower(schedule_week) NOT IN ('wildcard','division','conference','superbowl')
+                  ")
+
+# remove white space and special characters from stadium names to join further downstream 
+df_main$stad_fkey <- str_replace_all(df_main$stadium, "[^[:alnum:]]", " ")
+df_main$stad_fkey <- gsub("[[:space:]]", "", df_main$stad_fkey)
+
+# add a foreign key for the teams table
+df_main$fav_fkey <- str_replace_all(df_main$team_favorite_id, "[^[:alnum:]]", " ")
+df_main$fav_fkey <- gsub("[[:space:]]", "", df_main$fav_fkey)
+
+# pull in required fields from the team table
+df_teams <-  sqldf("SELECT
+                      team_id
+                      ,team_name
+                    FROM 
+                      df_teams
+                    WHERE 
+                      team_division IS NOT NULL AND team_division <> ''
+                      AND team_name <> 'San Diego Chargers'
+                  ")
+# add primary key to the teams table
+df_teams$fav_pkey <- str_replace_all(df_teams$team_id, "[^[:alnum:]]", " ")
+df_teams$fav_pkey <- gsub("[[:space:]]", "", df_teams$fav_pkey)
+
+#combine all three tables
+df_final <- sqldf("SELECT
+                      a.*, b.*,c.*
+                    FROM 
+                      df_main a
+                    LEFT JOIN 
+                      df_stadiums b ON a.stad_fkey = b.stad_pkey
+                    LEFT JOIN
+                      df_teams c ON a.fav_fkey= c.fav_pkey
+                     ")
+# had to remove null divisions further upstream and had to remove San Diego Chargers and keep LA Chargers
+checkDups <- sqldf("SELECT
+                      COUNT(SKEY) as CNT
+                      ,SKEY
+                   FROM
+                   df_final
+                   GROUP BY SKEY
+                   HAVING COUNT(SKEY) > 1")
+
+winningTeam <- sqldf(' SELECT
+                          a.SKEY
+                          ,a.schedule_date
+                          ,a.team_home
+                          ,a.team_away
+                          ,a.spread_favorite
+                          ,CASE WHEN winningTeam = favTeam THEN 1 ELSE 0 END AS favWon
+                          ,favTeam,winningTeam,winningTeamScore,losingTeamScore
+                          ,a.over_under_line
+                          ,winningTeamScore + losingTeamScore AS actualOverUnder
+                          FROM 
+                            df_final a
+                          INNER JOIN
+                              (SELECT
+                                SKEY
+                                ,team_home
+                                ,schedule_date
+                                ,CASE WHEN score_home > score_away THEN team_home 
+                                     WHEN score_away > score_home THEN team_away
+                                     ELSE "tie" END AS winningTeam
+                                ,CASE WHEN score_home > score_away THEN score_home 
+                                     WHEN score_away > score_home THEN score_away
+                                     ELSE 0 END AS winningTeamScore
+                                ,CASE WHEN score_home > score_away THEN score_away 
+                                     WHEN score_away > score_home THEN score_home
+                                     ELSE 0 END AS losingTeamScore
+                                ,over_under_line
+                                ,team_name as favTeam
+                              FROM 
+                                df_final a
+                              ) scores ON a.SKEY = scores.SKEY 
+                         ')
+                    
+# create a calculated field to show who won and the final point spread outcome
+spreadCorrect1 <- sqldf('
+                       SELECT
+                        SKEY
+                        ,schedule_date
+                        ,team_home
+                        ,team_away
+                        ,favTeam
+                        ,winningTeam
+                        ,winningTeamScore
+                        ,losingTeamScore
+                        ,spread_favorite
+                        ,actualOverUnder
+                        ,over_under_line
+                        ,CASE WHEN favWon = 1 THEN losingTeamScore - winningTeamScore 
+                            WHEN favWon = 0 THEN  winningTeamScore - losingTeamScore
+                            ELSE spread_favorite end as actualSpread
+                        ,CASE WHEN favTeam = winningTeam THEN 1 ELSE 0 END AS favTeamWon
+                       FROM 
+                        winningTeam
+                       ')
+
+# create a calculated field to show how off was the Over Under
+df_final <- sqldf('SELECT
+                        b.*
+                        ,a.favTeam
+                        ,a.winningTeam
+                        ,a.winningTeamScore
+                        ,a.losingTeamScore
+                        ,a.actualSpread
+                        ,CASE WHEN a.actualSpread > 0 THEN 1 ELSE 0
+                          END AS upsetInd
+                        ,CASE WHEN a.favTeamWon = 1 THEN (abs(a.actualSpread) - abs(a.spread_favorite))/abs(a.spread_favorite)
+                              ELSE (abs(a.actualSpread) - (a.spread_favorite))/(a.spread_favorite)
+                               END*100 prcntSprdOff
+                        ,a.actualOverUnder
+                        ,((abs(a.actualOverUnder) - abs(a.over_under_line))/abs(a.over_under_line))*100 as  prcntOvrUndrOff
+                       FROM 
+                        spreadCorrect1 a
+                      INNER JOIN df_final b ON a.SKEY = b.SKEY
+                       ')
+
+# bring in some weather variables to indicate the severity of the weather
+# cold season is defined as any games played in the last three weeks of the regular season
+# numDaysCold is defined as any game played where the temprature is <32 degrees
+df_final <- sqldf("SELECT DISTINCT 
+                    a.*
+                    ,CASE WHEN schedule_week < 14 THEN 0 ELSE 1 END AS coldSeason  
+                    ,CASE WHEN weather_temperature > 20 and weather_temperature <= 32 THEN 1
+                          WHEN weather_temperature > 10 and weather_temperature < 20  THEN 2
+                          WHEN weather_temperature <= 10 THEN 3
+                          ELSE 0
+                              END AS coldDayLvl
+                  FROM
+                    df_final a
+                   ")
+
+# include the final metrics for analysis
+df_final <- sqldf("SELECT
+                      SKEY
+                      ,schedule_date
+                      ,weather_temperature
+                      ,weather_wind_mph
+                      ,weather_humidity
+                      ,stadium_weather_type
+                      ,ELEVATION
+                      ,LATITUDE
+                      ,LONGITUDE
+                      ,favTeam
+                      ,winningTeam
+                      ,actualSpread
+                      ,upsetInd
+                      ,prcntSprdOff
+                      ,actualOverUnder
+                      ,prcntOvrUndrOff
+                      ,coldSeason
+                      ,coldDayLvl
+                    FROM df_final
+                  ")
+
+# remove NA values
+df_cleaned <- na.omit(df_final)
+```
+
+### What does the final data set look like? 
+
+```{r}
+head(df_cleaned)
+str(df_cleaned)
+```
+
+### What information is not self-evident? 
+
+At this point, finding a key that will link the three databases is a challenge. Looking through the datasets, there are several “like” columns. However, the data within them also varies. For example, there are several special characters in stadium name in one table, but not in the other. Also, the spreadspoke_scores.csv dataset uses an abbreviation of the team name to determine the winner. This makes it a challenge to do any sort of one to one comparison of home team compared to favorite or away team vs favorite. 
+
+### What are different ways you could look at this data? 
+Utilizing the weather patterns, I hope to uncover some metrics that could help tell which teams could be considered “cold teams”, and which teams could be considered “warm teams” in terms of climate.
+
+I also know that simple wins and losses aren’t necessarily enough to tell how well a team performed. For example, if the Miami Dolphins are heavy favorites against the Chicago Bears in December at Soldier Field, a win may not translate to cold weather impact. However, the total win margin vs the predicted spread and the over/under may be more telling. 
+
+### How do you plan to slice and dice the data?
+I utilized my domain knowledge of the sport of football, along with some data manipulation to portray this data in different ways. I added several variables to the dataset, based on minor calculations from the three datasets. Joining the three datasets was a challenge, as the three data sets were missing a primary key. 
+
+
+### How could you summarize your data to answer key questions?
+* Was the over/under correctly when cold weather was a factor
+* Were spreads accurate when cold weather was a factor
+* Do non-cold teams play worse in the cold (adjust by favorite and spread vs actual)
+* Does wind correlate to wins/loses in cold weather?
+
+
+### What types of plots and tables will help you to illustrate the findings to your questions? 
+I will start with a distribution of the data once it has been filtered, and once the new variables have been included in the data. This can be visualized with a histogram. 
+
+I want to show how well the data correlates when transformed. For example, will we see a linear relationship between data that is manipulated (i.e. wind chill and temperature) compared to under performance by a southern away team? A scatter plot can tell a valuable story, or even a timeseries showing how the weather has impacted the spread over the years. Have warmer climate teams performed better or worse in colder environments?
+
+I also want to visualize the variables correlation coefficients in a correlation matrix. 
+
+Finally, I want to visualize the success of the algorithms applied. 
+
+### Do you plan on incorporating any machine learning techniques to answer your research questions? Explain.
+I am going to apply a linear regression to see if we can predict future impacts based on cold weather scenarios. 
+
+I will utilize a logistic regression analysis to see if we can predict weather a team is impacted by cold weather events. 
