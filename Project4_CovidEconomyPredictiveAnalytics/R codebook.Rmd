@@ -1,0 +1,75 @@
+---
+title: "DSC 630"
+author: "Adam Curry"
+date: "11/18/2020"
+output: word_document
+---
+
+## Import the libraries and the data from SQL
+```{r setup, include=FALSE}
+#import libraries
+library(DBI)
+library(RSQLite)
+library(dplyr)
+library(ggplot2)
+# create the connection to the database
+db <- dbConnect( SQLite(), dbname = "C:\\Users\\adamp\\df_Joiner.db" )
+
+# localize the data
+dbListTables(db)
+df <- dbReadTable(db, "df_to_R")
+```
+## Apply the algorithms
+k-means cluster variables based on economic parameters, stringency index, and google retail and recreation 
+```{r}
+set.seed(123)
+df_K <- select(df,'econ_derived','StringencyIndexForDisplay','gps_retail_and_recreation')
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering algorithms & visualization
+df_K <- na.omit(df_K)
+# convert all the columns to numeric
+df_K <- sapply(df_K, as.numeric)
+df_K <- scale(df_K)
+df_K <- data.frame(df_K)
+```
+
+using the average silhoutte method method, find the optimal number of clusters for the K-means cluster algorithm.
+create the K-Means algorithm with 3 centroids. The first step when using k-means clustering is to indicate the number of clusters (k) that will be generated in the final solution.
+```{r}
+fviz_nbclust(df_K, kmeans, method = "silhouette")
+
+
+k2 <- kmeans(df_K, centers = 3, nstart = 25)
+
+```
+
+# plot the clusters   
+fviz_cluster will perform principal component analysis (PCA) and plot the data points according to the first two principal components that explain the majority of the variance.
+
+```{r}
+fviz_cluster(k2, geom = "point", data = df_K) + 
+  ggtitle("K-Means cluster of observations utilizing economic metrics, 
+          government stringency, and workplace mobility")
+#the number of clusters (k) that will be generated in the final solution.
+
+```
+
+# add the clusters to the data frame
+```{r}
+df$cluster_economy <- k2$cluster
+
+# split apart clusters into separate columns
+
+# replace the NA's in the new columns with 0's
+df[is.na(df)] <- 0
+df$cluster <- k2$cluster
+
+# write the clustered data back to database to continue work in Python
+dbRemoveTable(db, "db_clustered", df)
+
+dbWriteTable(db, "db_clustered", df)
+
+# Disconnect from the database
+dbDisconnect(db)
+```
+
