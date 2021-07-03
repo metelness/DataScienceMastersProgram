@@ -16,4 +16,5 @@ General sentiment
 Visuals of how the topics relate to the sentiment
 
 ### Run Instructions
-Simply run the Jupyter Notebook
+Simply run the Jupyter Notebook after updating filepaths 
+Tableau is required for the visuals
